@@ -10,7 +10,8 @@ Jiangxi university of finance and economics
 import pandas as pd
 import re
 from docopt import Pattern
-pricedata=pd.read_csv(r'C:\Users\Agnostic\Desktop\pricedetails.csv')
+#from data_collect_process.history_weather_collect import parttern
+#pricedata=pd.read_csv(r'C:\Users\Agnostic\Desktop\pricedetails.csv')
 #varietiesName=pd.DataFrame(pricedata)['varietiesName'].drop_duplicates() 
 #varietiesName.to_csv('varietiesName.csv')
 def process_condition():
@@ -57,15 +58,27 @@ def condition_reprocess():
 def weather_price_process():
    weather_price1=weather_price.dropna()
    weather_price1.to_csv('weather_price.csv')
-    
+def  weather_10_process():
+    list=[]
+    for i in weather_10_process1['priceDate']:
+       a= i.replace('2017/1','2017/10') 
+       list.append(a)
+    weather_10_process1['priceDate']=list
+    weather_10_process1.to_csv('weatehr_patch.csv')
 if __name__ == '__main__': 
     list=[]
     weatherdata=pd.read_csv(r'C:\Users\Agnostic\Desktop\weather.csv',encoding='utf8')
-    weather_price=pd.read_csv(r'C:\Users\Agnostic\Desktop\weather_price1.csv',encoding='utf8')
+    weather_price=pd.read_csv(r'C:\Users\Agnostic\Desktop\preprocess\weather_price.csv',encoding='utf8')
+    weather_10_process1=pd.read_csv(r'weather_patch.csv')
     #date_process()  
     #process_condition() 
     #condition_reprocess()
     weather_price_process()
+    #weather_10_process()
+   # weather=pd.read_csv('weather.csv')
+    #print(weather)
+    
+   
     
 
 

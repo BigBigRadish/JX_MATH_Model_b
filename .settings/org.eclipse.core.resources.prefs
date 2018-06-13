@@ -1,6 +1,10 @@
 eclipse.preferences.version=1
+encoding//create_math_models/model_1.py=utf-8
 encoding//data_collect_process/data_general_process.py=utf-8
 encoding//data_collect_process/history_weather_collect.py=utf-8
+encoding//data_collect_process/market_report_word_process.py=utf-8
 encoding//data_collect_process/price_data_collect.py=utf-8
 encoding//data_collect_process/topicWord_data_collect.py=utf-8
+encoding//data_preprocess/re_reprocess.py=utf-8
+encoding//data_preprocess/transport_price.py=utf-8
 encoding/<project>=UTF-8
